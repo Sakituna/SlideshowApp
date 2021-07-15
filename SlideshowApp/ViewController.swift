@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             // 再生時の処理を実装
             
             // タイマーをセットする
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
             
             // ボタンの名前を停止に変える
             startButton.setTitle("■", for: .normal)

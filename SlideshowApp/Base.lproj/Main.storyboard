@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6S-ko-Vuo">
-                                <rect key="frame" x="75" y="340" width="30" height="48"/>
+                                <rect key="frame" x="75" y="283" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="◀︎"/>
                                 <connections>
@@ -25,7 +25,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nb5-7y-BL5">
-                                <rect key="frame" x="309" y="340" width="30" height="48"/>
+                                <rect key="frame" x="309" y="283" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="▶︎"/>
                                 <connections>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWD-tg-MKD">
-                                <rect key="frame" x="192" y="340" width="30" height="48"/>
+                                <rect key="frame" x="192" y="283" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="●"/>
                                 <connections>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuna01" id="k5C-YE-DyI">
-                                <rect key="frame" x="57" y="112" width="301" height="218"/>
+                                <rect key="frame" x="76" y="117" width="262" height="156"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -73,21 +73,24 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="27.536231884057973" y="83.035714285714278"/>
+            <point key="canvasLocation" x="27.536231884057973" y="82.33695652173914"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="qeK-7L-pXh">
             <objects>
                 <viewController id="m6p-FV-g00" customClass="ResultViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gda-nJ-tgt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GMZ-ec-ywb">
-                                <rect key="frame" x="20" y="43" width="374" height="240"/>
+                                <rect key="frame" x="20" y="50" width="374" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="fAa-mn-DAs"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5l9-IO-glM">
-                                <rect key="frame" x="0.0" y="293" width="414" height="33"/>
+                                <rect key="frame" x="0.0" y="310" width="414" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="戻る">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -100,14 +103,16 @@
                         <viewLayoutGuide key="safeArea" id="UyR-Wz-sis"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="GMZ-ec-ywb" firstAttribute="centerX" secondItem="Gda-nJ-tgt" secondAttribute="centerX" id="1MV-KA-Vi5"/>
                             <constraint firstItem="UyR-Wz-sis" firstAttribute="trailing" secondItem="5l9-IO-glM" secondAttribute="trailing" id="1bc-EG-JUR"/>
                             <constraint firstItem="UyR-Wz-sis" firstAttribute="trailing" secondItem="GMZ-ec-ywb" secondAttribute="trailing" constant="20" id="2EG-eP-EeT"/>
-                            <constraint firstItem="GMZ-ec-ywb" firstAttribute="top" secondItem="UyR-Wz-sis" secondAttribute="top" constant="43" id="9oQ-Z3-N8Z"/>
-                            <constraint firstItem="5l9-IO-glM" firstAttribute="top" secondItem="GMZ-ec-ywb" secondAttribute="bottom" constant="10" id="Gom-QX-3hH"/>
+                            <constraint firstItem="UyR-Wz-sis" firstAttribute="trailing" secondItem="GMZ-ec-ywb" secondAttribute="trailing" constant="20" id="6QK-Z0-mHT"/>
+                            <constraint firstItem="GMZ-ec-ywb" firstAttribute="leading" secondItem="UyR-Wz-sis" secondAttribute="leading" constant="20" id="AF4-sA-eWK"/>
                             <constraint firstItem="GMZ-ec-ywb" firstAttribute="centerX" secondItem="Gda-nJ-tgt" secondAttribute="centerX" id="Hye-6t-KPl"/>
                             <constraint firstItem="5l9-IO-glM" firstAttribute="leading" secondItem="UyR-Wz-sis" secondAttribute="leading" id="R3P-fQ-jvm"/>
+                            <constraint firstItem="GMZ-ec-ywb" firstAttribute="top" secondItem="UyR-Wz-sis" secondAttribute="top" constant="50" id="VvP-Oy-6kx"/>
                             <constraint firstItem="GMZ-ec-ywb" firstAttribute="leading" secondItem="UyR-Wz-sis" secondAttribute="leading" constant="20" id="fkA-HW-eG2"/>
-                            <constraint firstItem="UyR-Wz-sis" firstAttribute="bottom" secondItem="GMZ-ec-ywb" secondAttribute="bottom" constant="525" id="lGB-hk-IPd"/>
+                            <constraint firstItem="5l9-IO-glM" firstAttribute="top" secondItem="GMZ-ec-ywb" secondAttribute="bottom" constant="10" id="jWF-qA-4Jh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ACR-hV-qKC"/>
@@ -118,7 +123,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5W-2v-xzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="5sa-Fu-cyK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="730.43478260869574" y="82.366071428571431"/>
+            <point key="canvasLocation" x="730.37383177570086" y="82.289416846652273"/>
         </scene>
     </scenes>
     <resources>
