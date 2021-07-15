@@ -8,7 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var theBackButton: UIButton!
+    @IBOutlet weak var theForwardButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
     // 配列に指定するindex番号を宣言
@@ -42,6 +45,10 @@ class ViewController: UIViewController {
             // ボタンの名前を停止に変える
             startButton.setTitle("■", for: .normal)
             
+            //再生時、戻る・進むボタンを無効にする
+            theForwardButton.isEnabled = false
+            theBackButton.isEnabled = false
+            
         } else {
             // 停止時の処理を実装
             // タイマーを停止する
@@ -53,8 +60,10 @@ class ViewController: UIViewController {
             // ボタンの名前を再生に直しておく
             startButton.setTitle("●", for: .normal)
             
+            //停止時、戻る・進むボタンを有効にする
+            theForwardButton.isEnabled = true
+            theBackButton.isEnabled = true
         }
-        
     }
     
     @IBAction func forwardButton(_ sender: Any) {

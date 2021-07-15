@@ -63,6 +63,8 @@
                     <connections>
                         <outlet property="imageView" destination="k5C-YE-DyI" id="9aY-RM-KAR"/>
                         <outlet property="startButton" destination="EWD-tg-MKD" id="LOE-cK-wJF"/>
+                        <outlet property="theBackButton" destination="W6S-ko-Vuo" id="sCU-os-KLm"/>
+                        <outlet property="theForwardButton" destination="Nb5-7y-BL5" id="zWv-pp-0k6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
