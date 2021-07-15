@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:tuna01.jpg">
+   </FileRef>
+   <FileRef
+      location = "group:tuna02.jpg">
+   </FileRef>
+   <FileRef
+      location = "group:tuna03.jpg">
+   </FileRef>
+   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>
