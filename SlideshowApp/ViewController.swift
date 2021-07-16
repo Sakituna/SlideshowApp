@@ -113,6 +113,36 @@ class ViewController: UIViewController {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         // 遷移先のResultViewControllerで宣言している値を代入して渡す
         resultViewController.tapImage = imageView.image
+        
+        if (timer == nil) {
+            // 再生時の処理を実装
+            
+            // タイマーをセットする
+            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
+            
+            // ボタンの名前を停止に変える
+            startButton.setTitle("■", for: .normal)
+            
+            //再生時、戻る・進むボタンを無効にする
+            theForwardButton.isEnabled = false
+            theBackButton.isEnabled = false
+            
+        } else {
+            // 停止時の処理を実装
+            // タイマーを停止する
+            timer.invalidate()
+            
+            //タイマーを削除しておく(timer.invalidateだけだとtimerがnilにならないため)
+            timer = nil
+            
+            // ボタンの名前を再生に直しておく
+            startButton.setTitle("●", for: .normal)
+            
+            //停止時、戻る・進むボタンを有効にする
+            theForwardButton.isEnabled = true
+            theBackButton.isEnabled = true
+        }
+
     }
     
     //戻るボタンの処理
