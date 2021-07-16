@@ -20,9 +20,9 @@ class ViewController: UIViewController {
     var timer: Timer!
     // スライドショーさせる画像の配列を宣言
     var imageArray:[UIImage] = [
-        UIImage(named: "tuna01")!,
-        UIImage(named: "tuna02")!,
-        UIImage(named: "tuna03")!
+        UIImage(named: "tuna01.jpg")!,
+        UIImage(named: "tuna02.jpg")!,
+        UIImage(named: "tuna03.jpg")!
     ]
     
     override func viewDidLoad() {
@@ -115,17 +115,8 @@ class ViewController: UIViewController {
         resultViewController.tapImage = imageView.image
         
         if (timer == nil) {
-            // 再生時の処理を実装
-            
-            // タイマーをセットする
-            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
-            
-            // ボタンの名前を停止に変える
-            startButton.setTitle("■", for: .normal)
-            
-            //再生時、戻る・進むボタンを無効にする
-            theForwardButton.isEnabled = false
-            theBackButton.isEnabled = false
+ 
+            imageView.image = imageArray[nowIndex]
             
         } else {
             // 停止時の処理を実装
@@ -142,6 +133,7 @@ class ViewController: UIViewController {
             theForwardButton.isEnabled = true
             theBackButton.isEnabled = true
         }
+        
 
     }
     

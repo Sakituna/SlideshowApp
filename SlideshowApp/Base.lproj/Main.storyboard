@@ -40,7 +40,7 @@
                                     <action selector="slideShowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rcj-Qn-EX1"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuna01" id="k5C-YE-DyI">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuna01.jpg" id="k5C-YE-DyI">
                                 <rect key="frame" x="76" y="149" width="276" height="196"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -129,7 +129,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tuna01" width="4032" height="3024"/>
+        <image name="tuna01.jpg" width="4032" height="3024"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
